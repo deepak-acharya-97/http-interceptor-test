@@ -1,0 +1,91 @@
+swagger: "2.0"
+info:
+ title: Integration Microservice
+ description: Provides APIs for Integration Microservice
+ version: 0.0.0
+definitions:
+  Application:
+    type: object
+    properties:
+      id:
+        format: int32
+        type: integer
+      name:
+        type: string
+      info:
+        type: string
+      developer:
+        type: string
+      url:
+        type: string
+paths:
+ /api/Register:
+   get:
+     summary: Gets all the integration services registered to the marketplace
+     tags:
+     - Application
+     responses:
+       200:
+         description: Returns all the integration services registered
+         schema:
+           type: array
+           items:
+              $ref: "#/definitions/Application"
+   post:
+    summary: Adds the current integration service to marketplace
+    tags:
+    - Application
+    parameters:
+      - name: application
+        in: body
+        required: false
+        schema:
+          $ref: "#/definitions/Application"
+    responses:
+      200:
+        description: Success
+ /api/Registers/{id}:
+    get:
+      summary: Getting the integration services based on id
+      tags:
+      - Application
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        format: int32
+      responses:
+        '200':
+          description: Success
+    put:
+      summary: Updating the integration services based on id
+      tags:
+      - Application
+      parameters:
+        - name: id
+          in: path
+          required: false
+          type: integer
+          format: int32
+        - name: application
+          in: body
+          required: false
+          schema:
+            $ref: "#/definitions/Application"
+      responses:
+        "200":
+          description: Success
+    delete:
+      summary: Delete an integration service based on id
+      tags:
+      - Application
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        format: int32
+      responses:
+        '200':
+          description: Success

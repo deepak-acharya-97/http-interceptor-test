@@ -1,0 +1,14 @@
+D:\PRODUCT DEVELOPMENT\RoadMapServer\bin\Debug\netcoreapp2.1\RoadMapServer.deps.json
+D:\PRODUCT DEVELOPMENT\RoadMapServer\bin\Debug\netcoreapp2.1\RoadMapServer.runtimeconfig.json
+D:\PRODUCT DEVELOPMENT\RoadMapServer\bin\Debug\netcoreapp2.1\RoadMapServer.runtimeconfig.dev.json
+D:\PRODUCT DEVELOPMENT\RoadMapServer\bin\Debug\netcoreapp2.1\RoadMapServer.dll
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.csproj.CoreCompileInputs.cache
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.RazorAssemblyInfo.cache
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.RazorAssemblyInfo.cs
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.AssemblyInfoInputs.cache
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.AssemblyInfo.cs
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.RazorTargetAssemblyInfo.cache
+D:\PRODUCT DEVELOPMENT\RoadMapServer\bin\Debug\netcoreapp2.1\RoadMapServer.pdb
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.dll
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.pdb
+D:\PRODUCT DEVELOPMENT\RoadMapServer\obj\Debug\netcoreapp2.1\RoadMapServer.csprojAssemblyReference.cache

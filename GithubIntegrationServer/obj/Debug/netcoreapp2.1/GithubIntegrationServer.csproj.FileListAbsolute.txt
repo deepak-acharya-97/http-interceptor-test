@@ -1,0 +1,14 @@
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\bin\Debug\netcoreapp2.1\GithubIntegrationServer.deps.json
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\bin\Debug\netcoreapp2.1\GithubIntegrationServer.runtimeconfig.json
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\bin\Debug\netcoreapp2.1\GithubIntegrationServer.runtimeconfig.dev.json
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\bin\Debug\netcoreapp2.1\GithubIntegrationServer.dll
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.csprojAssemblyReference.cache
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.csproj.CoreCompileInputs.cache
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.RazorAssemblyInfo.cache
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.RazorAssemblyInfo.cs
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.AssemblyInfoInputs.cache
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.AssemblyInfo.cs
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.RazorTargetAssemblyInfo.cache
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\bin\Debug\netcoreapp2.1\GithubIntegrationServer.pdb
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.dll
+D:\PRODUCT DEVELOPMENT\GithubIntegrationServer\obj\Debug\netcoreapp2.1\GithubIntegrationServer.pdb
