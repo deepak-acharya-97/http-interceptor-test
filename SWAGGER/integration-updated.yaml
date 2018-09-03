@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
- title: Integration Microservice
- description: Provides APIs for Integration Microservice
+ title: Marketplace Microservice
+ description: Provides APIs for Marketplace Microservice
  version: 0.0.0
 definitions:
   Application:
@@ -16,10 +16,12 @@ definitions:
         type: string
       developer:
         type: string
-      url:
+      appUrl:
+        type: string
+      logoUrl:
         type: string
 paths:
- /api/Register:
+ /api/applications:
    get:
      summary: Gets all the integration services registered to the marketplace
      tags:
@@ -44,7 +46,7 @@ paths:
     responses:
       200:
         description: Success
- /api/Registers/{id}:
+ /api/applications/{id}:
     get:
       summary: Getting the integration services based on id
       tags:
