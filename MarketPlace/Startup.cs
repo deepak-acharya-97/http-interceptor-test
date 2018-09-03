@@ -27,6 +27,7 @@ namespace MarketPlace
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //var connection = @"Server=db;Database=VerificationContext;User=sa;Password=Anashku@100;";
             services.AddCors(o => o.AddPolicy("AppPolicy", builder =>
              builder.AllowAnyHeader()
                     .AllowAnyMethod()
@@ -50,6 +51,8 @@ namespace MarketPlace
             {
                 app.UseHsts();
             }
+            var context = app.ApplicationServices.GetService<MarketPlaceContext>();
+            context.Database.Migrate();
             app.UseCors("AppPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -22,9 +22,10 @@ namespace MarketPlace.Controllers
 
         // GET: api/Applications
         [HttpGet]
-        public IEnumerable<Application> GetApplication()
+        public async Task<IEnumerable<Application>> GetApplication()
         {
-            return _context.Application;
+            var AllApplications = await _context.Application.Select(s => s).ToListAsync();
+            return AllApplications;
         }
 
         // GET: api/Applications/5
