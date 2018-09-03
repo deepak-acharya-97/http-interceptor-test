@@ -51,8 +51,8 @@ namespace MarketPlace
             {
                 app.UseHsts();
             }
-            var context = app.ApplicationServices.GetService<MarketPlaceContext>();
-            context.Database.Migrate();
+            //var context = app.ApplicationServices.GetService<MarketPlaceContext>();
+            //context.Database.Migrate();
             app.UseCors("AppPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
