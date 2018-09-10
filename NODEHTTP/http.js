@@ -19,7 +19,6 @@
 //     // Do stuff with response
 //     console.log(res);
 //   });
-var request = require('request');
 
 // request.get('http://172.23.238.180:5000/api/roadmaps', function (err, res, body) {
 //     if (err) {
@@ -34,6 +33,9 @@ var request = require('request');
 //     //etc
 //     //TODO Do something with response
 // });
+
+var request = require('request');
+
 
 
 let options = {

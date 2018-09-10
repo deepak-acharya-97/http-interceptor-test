@@ -1,0 +1,49 @@
+{
+  "name": "GithubBot",
+  "version": "1.0.0",
+  "description": "Github Bot To TL;DM",
+  "author": "Deepak Acharya <aacharyadeepak100@gmail.com> (Nothing)",
+  "license": "ISC",
+  "repository": "https://github.com/deepakacharyahebri/GithubBot.git",
+  "homepage": "https://github.com/deepakacharyahebri/GithubBot",
+  "bugs": "https://github.com/deepakacharyahebri/GithubBot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "probot": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
+}

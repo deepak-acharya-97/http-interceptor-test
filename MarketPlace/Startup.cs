@@ -12,6 +12,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using MarketPlace.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace MarketPlace
 {
@@ -27,6 +30,28 @@ namespace MarketPlace
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(
+               options =>
+               {
+                   options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                   options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                   options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+               })
+               .AddJwtBearer(
+               options =>
+               {
+                   options.SaveToken = true;
+                   options.RefreshOnIssuerKeyNotFound = false;
+                   options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                   {
+                       ValidateIssuer = true,
+                       ValidateAudience = true,
+                       ValidAudience = "http://oec.com",
+                       ValidIssuer = "http://oec.com",
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"))
+                   };
+               }
+               );
             //var connection = @"Server=db;Database=VerificationContext;User=sa;Password=Anashku@100;";
             services.AddCors(o => o.AddPolicy("AppPolicy", builder =>
              builder.AllowAnyHeader()
@@ -53,6 +78,7 @@ namespace MarketPlace
             }
             //var context = app.ApplicationServices.GetService<MarketPlaceContext>();
             //context.Database.Migrate();
+            app.UseAuthentication();
             app.UseCors("AppPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
