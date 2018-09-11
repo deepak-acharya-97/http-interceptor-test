@@ -6,9 +6,10 @@ module.exports = app => {
   // Your code here
   app.log('Yay, the app was loaded!')
 
-  app.on('issues.opened', async context => {
+  app.on('issues.assigned', async context => {
     console.log("Assignee");
-    //console.log(context.payload.assignee);
+    //console.log(context);
+    console.log(context.payload.assignee.login);
     console.log("issue created");
     const issueComment = context.issue({ body: 'Thanks for opening this issue!' })
     return context.github.issues.createComment(issueComment)
