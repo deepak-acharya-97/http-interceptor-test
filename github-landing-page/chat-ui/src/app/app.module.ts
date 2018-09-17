@@ -7,12 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './materialmodule';
 import { LandingComponent } from './landing/landing.component';
 import { Ng2Webstorage } from 'ngx-webstorage';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GithubAuthService } from './github-auth.service';
+import { AuthInterceptor } from './auth.interceptor';
+import { FriendsComponent } from './friends/friends.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    LoginComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,9 +27,15 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     Ng2Webstorage,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [GithubAuthService, 
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

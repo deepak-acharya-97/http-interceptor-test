@@ -1,0 +1,23 @@
+<p class="align" *ngIf="!friend && !error">
+  <mat-spinner></mat-spinner>
+</p>
+<div *ngIf="friend">
+  <table border=5>
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>NickName</th>
+      <th>Native</th>
+    </tr>
+    <tr>
+      <th>{{ friend["firstName"] }}</th>
+      <th>{{ friend["lastName"] }}</th>
+      <th>{{ friend["nickName"] }}</th>
+      <th>{{ friend["native"] }}</th>
+    </tr>
+  </table>
+</div>
+<section *ngIf="error">
+  You have been logged out. Please login again
+  <button mat-flat-button color="accent" routerLink="/login">Login</button>
+</section>

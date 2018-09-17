@@ -1,0 +1,22 @@
+.align {
+    height: 100%;
+    width: 100%;
+    margin-left: 50%;
+}
+
+table {
+    margin-top: 20px;
+    padding: 4px;
+    margin-left: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: red;
+    font-size: 33px;
+}
+
+section {
+    color: red;
+    margin-top: 15%;
+    margin-left: 20%;
+    font-size: 30px;
+}
